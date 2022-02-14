@@ -23,6 +23,8 @@ public class JsonProvider {
         bookJson.put(Variables.BOOKS_YEAR_KEY, book.getYear());
         bookJson.put(Variables.BOOKS_EDITORIAL_KEY, book.getEditorial());
         bookJson.put(Variables.BOOKS_IMAGE_KEY, book.getImage());
+        bookJson.put(Variables.BOOKS_PRICE_KEY, book.getPrice());
+        bookJson.put(Variables.BOOKS_CATEGORY_KEY, book.getCategory());
         return bookJson;
     }
 
@@ -57,6 +59,8 @@ public class JsonProvider {
         bookJson.put(Variables.BOOKS_YEAR_KEY, book.getYear());
         bookJson.put(Variables.BOOKS_EDITORIAL_KEY, book.getEditorial());
         bookJson.put(Variables.BOOKS_IMAGE_KEY, book.getImage());
+        bookJson.put(Variables.BOOKS_PRICE_KEY, book.getPrice());
+        bookJson.put(Variables.BOOKS_CATEGORY_KEY, book.getCategory());
         final JSONArray arrayJs = getJsonArray();
         arrayJs.put(bookJson);
        saveJsonArray(arrayJs);

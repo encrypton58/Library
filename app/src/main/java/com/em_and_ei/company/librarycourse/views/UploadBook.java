@@ -25,7 +25,7 @@ public class UploadBook extends AppCompatActivity {
     int bookIndexEditable = -1;
     ActivityUploadBookBinding binding;
     private Book book = new Book();
-   final PresenterInterface presenter = new Presenter();
+    final PresenterInterface presenter = new Presenter();
 
     private final ActivityResultLauncher<Intent> forResult = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(), result -> {
@@ -49,12 +49,14 @@ public class UploadBook extends AppCompatActivity {
 
         if(isToEdit){
             bookIndexEditable = getIntent().getExtras().getInt(Variables.BOOK_POSITION_EXTRA_KEY);
-            Toast.makeText(this, bookIndexEditable + "", Toast.LENGTH_SHORT).show();
             book = BooksProvider.getBook(bookIndexEditable, getApplicationContext());
+            Toast.makeText(this, book.getPrice() + "", Toast.LENGTH_SHORT).show();
             Objects.requireNonNull(binding.uploadTitle.getEditText()).setText(book.getTitle());
             Objects.requireNonNull(binding.uploadAuthor.getEditText()).setText(book.getAuthor());
             Objects.requireNonNull(binding.uploadEditorial.getEditText()).setText(book.getEditorial());
             Objects.requireNonNull(binding.uploadYear.getEditText()).setText(book.getYear());
+            Objects.requireNonNull(binding.uploadPrice.getEditText()).setText(String.valueOf(book.getPrice()));
+            Objects.requireNonNull(binding.uploadCategoria.getEditText()).setText(book.getCategory());
             binding.uploadImage.setImageBitmap(BooksProvider.getImageConvertToBook(book.getImage()));
             binding.uploadTitleTextview.setText("Edit Book");
             binding.uploadBtnUp.setText("Edit");
@@ -66,6 +68,9 @@ public class UploadBook extends AppCompatActivity {
             book.setAuthor(Objects.requireNonNull(binding.uploadAuthor.getEditText()).getText().toString());
             book.setEditorial(Objects.requireNonNull(binding.uploadEditorial.getEditText()).getText().toString());
             book.setYear(Objects.requireNonNull(binding.uploadYear.getEditText()).getText().toString());
+            book.setCategory(Objects.requireNonNull(binding.uploadCategoria.getEditText()).getText().toString());
+            book.setPrice(Integer.parseInt(binding.uploadPrice.getEditText().getText().toString()));
+
             if(!checkInputs()){
                 if(isToEdit){
                     presenter.editBook(getApplicationContext(), bookIndexEditable, book);
@@ -112,6 +117,21 @@ public class UploadBook extends AppCompatActivity {
          }else{
              binding.uploadImageBtn.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.purple_500));
          }
+
+         if(Objects.requireNonNull(binding.uploadCategoria.getEditText()).getText().toString().isEmpty()){
+             binding.uploadCategoria.setError("This Field Is Empty");
+         }else{
+             binding.uploadCategoria.setError(null);
+         }
+
+
+        if(Objects.requireNonNull(binding.uploadPrice.getEditText()).getText().toString().isEmpty()){
+            binding.uploadPrice.setError("This Field Is Empty");
+        }else{
+            binding.uploadPrice.setError(null);
+        }
+
+
         return errors >= 1;
     }
 

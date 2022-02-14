@@ -3,9 +3,25 @@ package com.em_and_ei.company.librarycourse.models;
 import java.io.Serializable;
 
 public class Book implements Serializable {
-    String title, author, editorial, year;
+    String title, author, editorial, year, category;
     String image;
-    int id;
+    int id, price;
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
 
     public int getId() {
         return id;

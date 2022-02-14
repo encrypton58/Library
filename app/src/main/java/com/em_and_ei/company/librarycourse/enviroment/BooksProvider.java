@@ -32,6 +32,8 @@ public class BooksProvider {
                 book.setEditorial(object.getString(Variables.BOOKS_EDITORIAL_KEY));
                 book.setYear(object.getString(Variables.BOOKS_YEAR_KEY));
                 book.setImage(object.getString(Variables.BOOKS_IMAGE_KEY));
+                book.setCategory(object.getString(Variables.BOOKS_CATEGORY_KEY));
+                book.setPrice(object.getInt(Variables.BOOKS_PRICE_KEY));
                 books.add(book);
             }
         } catch (JSONException e) {

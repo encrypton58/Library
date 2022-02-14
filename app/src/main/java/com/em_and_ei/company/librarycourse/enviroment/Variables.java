@@ -6,8 +6,9 @@ public class Variables {
     protected static final String BOOKS_TITLE_KEY = "title";
     protected static final String BOOKS_AUTHOR_KEY = "author";
     protected static final String BOOKS_IMAGE_KEY = "image";
+    protected static final String BOOKS_CATEGORY_KEY = "category";
+    protected static final String BOOKS_PRICE_KEY = "price";
     protected static final String BOOKS_YEAR_KEY = "year";
     protected static final String BOOKS_EDITORIAL_KEY = "editorial";
     public static final String BOOK_POSITION_EXTRA_KEY = "position";
-    public static int currentBookSelected = -1;
 }
