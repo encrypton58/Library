@@ -14,7 +14,10 @@
     <string name="upload_activity_title">Upload Book</string>
     <string name="upload_upload_btn">Upload</string>
 
+    <string name="upload_price">Price</string>
+    <string name="upload_category">Category</string>
 
     <string name="main_title">Select one book</string>
+    <string name="book_item_select">Selected Book</string>
 
 </resources>
