@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.UploadBook">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/upload_year"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="187dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upload_editorial"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="14dp"
+        app:errorEnabled="true"
+        app:counterEnabled="true"
+        app:counterMaxLength="4"
+        app:helperText="*Required"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="96dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/year_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/upload_year"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/upload_author"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="187dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upload_editorial"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="35dp"
+        app:errorEnabled="true"
+        app:helperText="*Required"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="96dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/author_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/upload_author"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/upload_title"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upload_title_textview"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="25dp"
+        app:errorEnabled="true"
+        android:layout_marginEnd="19dp"
+        app:helperText="*Required"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="96dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/title_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/upload_title"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/upload_editorial"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upload_title"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        app:errorEnabled="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="19dp"
+        app:helperText="*Required"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="96dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editorial_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/upload_editorial"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/upload_title_textview"
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/allerta"
+        android:text="@string/upload_activity_title"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/upload_image"
+        android:layout_width="380dp"
+        android:layout_height="163dp"
+        android:layout_below="@+id/upload_author"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="14dp"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/upload_image_btn"
+        android:layout_width="116dp"
+        android:layout_height="37dp"
+        android:layout_below="@+id/upload_image"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="281dp"
+        android:text="@string/upload_image"
+        android:textColor="?attr/colorPrimary" />
+
+    <Button
+        android:id="@+id/upload_btn_up"
+        android:layout_width="338dp"
+        android:layout_height="62dp"
+        android:layout_below="@+id/upload_image_btn"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="36dp"
+        android:text="@string/upload_upload_btn" />
+</RelativeLayout>

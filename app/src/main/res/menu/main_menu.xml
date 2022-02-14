@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/search_icon"
+        app:showAsAction="always|collapseActionView"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        android:title="Search"/>
+
+    <item android:id="@+id/filter_menu"
+        android:title="Filters">
+
+        <menu>
+            <item android:id="@+id/filter_author" android:title="@string/upload_author"/>
+            <item android:id="@+id/filter_title" android:title="@string/upload_title"/>
+            <item android:id="@+id/filter_year" android:title="@string/upload_year"/>
+            <item android:id="@+id/filter_editorial" android:title="@string/upload_editorial"/>
+        </menu>
+
+    </item>
+
+</menu>

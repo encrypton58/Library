@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_card"
+    android:id="@+id/bottom_sheet"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/bottom_sheet_down_arrow"
+        android:layout_width="64dp"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="172dp"
+        android:background="@drawable/icon_down_arrow" />
+
+    <TextView
+        android:id="@+id/bottom_sheet_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bottom_sheet_down_arrow"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="24sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_below="@id/bottom_sheet_title"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <ImageView
+        android:id="@+id/bottom_sheet_image"
+        android:layout_width="282dp"
+        android:layout_height="211dp"
+        android:layout_below="@+id/bottom_sheet_title"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="66dp"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_below="@+id/bottom_sheet_image"
+        android:layout_marginTop="81dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bottom_sheet_delete_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:textColor="@color/bone_color"
+            android:backgroundTint="@color/red_color"
+            android:text="@string/main_delete_btn" />
+
+        <Button
+            android:id="@+id/bottom_sheet_edit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="@color/bone_color"
+            android:layout_weight="1"
+            android:backgroundTint="@color/blue_color"
+            android:text="@string/main_edit_btn" />
+    </LinearLayout>
+
+</RelativeLayout>
