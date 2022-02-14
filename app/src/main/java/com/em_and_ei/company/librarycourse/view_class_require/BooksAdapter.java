@@ -91,6 +91,7 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.BookHolder> 
     protected class BookHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         TextView title, author, selectedAlert;
+        TextView editorial, year;
         ImageView image;
         CardView card;
 
@@ -102,11 +103,15 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.BookHolder> 
             image = itemView.findViewById(R.id.book_item_image);
             card = itemView.findViewById(R.id.card_item_book);
             selectedAlert = itemView.findViewById(R.id.book_item_select_alert);
+            editorial = itemView.findViewById(R.id.book_item_editorial_text);
+            year = itemView.findViewById(R.id.book_item_year_text);
         }
 
         public void render(Book book) {
             title.setText(book.getTitle());
             author.setText(book.getAuthor());
+            editorial.setText(new StringBuilder("Author: ").append(book.getEditorial()));
+            year.setText(new StringBuilder("Year: ").append(book.getYear()));
             if (book.getImage() != null) {
                 getAndSetImage(book.getImage());
             }
