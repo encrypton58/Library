@@ -7,7 +7,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_item_book"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="20dp"
@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="50dp">
+            android:padding="20dp">
 
             <TextView
                 android:id="@+id/book_item_select_alert"
@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="Selected book"
+                android:text="@string/book_item_select"
                 android:textColor="@color/blue_color"
                 android:visibility="invisible" />
 
@@ -70,6 +70,37 @@
                 android:textColor="@color/bone_color"
                 android:textSize="18sp" />
 
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginTop="20dp"
+               android:orientation="horizontal">
+
+               <TextView
+                   android:id="@+id/book_item_editorial_text"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                   android:layout_gravity="center"
+                   android:text="@string/upload_editorial"
+                   android:textColor="@color/bone_color"
+                   android:textSize="16sp" />
+
+               <TextView
+                   android:id="@+id/book_item_year_text"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:text="@string/upload_year"
+                   android:textColor="@color/bone_color"
+                   android:textSize="16sp" />
+
+
+           </LinearLayout>
+
         </LinearLayout>
+
     </androidx.cardview.widget.CardView>
+
 </LinearLayout>
